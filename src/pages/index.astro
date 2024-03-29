@@ -16,7 +16,12 @@
 	</head>
 	<body class="grid place-content-center h-screen gap-3">
 		<h1 class="text-4xl font-bold">Share your text</h1>
-		<form class="flex flex-col gap-2" hx-post="/api/wth">
+		<form
+			class="flex flex-col gap-2"
+			hx-post="/api/wth"
+			hx-target="#output"
+			hx-swap="innerHTML"
+		>
 			<label for="endpoint">Endpoint</label>
 			<input
 				type="text"
@@ -34,5 +39,6 @@
 				>Publish</button
 			>
 		</form>
+		<div id="output"></div>
 	</body>
 </html>
